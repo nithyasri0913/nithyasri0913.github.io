@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nithyasri Srikumar</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <div class="container">
@@ -16,6 +16,7 @@
         <p>MSE in Computer and Information Science • University of Pennsylvania</p>
         <nav>
           <a href="projects/">Projects</a>
+          <a href="blog/">Blog</a>
           <a href="mailto:nithsri@seas.upenn.edu">Email</a>
           <a href="https://github.com/nithyasri0913" target="_blank">GitHub</a>
           <a href="https://linkedin.com/in/nithyasri-s" target="_blank">LinkedIn</a>
@@ -31,33 +32,47 @@
         for robotics, especially offline RL with flow- and diffusion-based policies for VLAs and
         sim-to-real transfer.
       </p>
+
+      <h3>Research Interests</h3>
+      <ul>
+        <li>Offline Reinforcement Learning &amp; Value Learning</li>
+        <li>Flow- and Diffusion-Based Robot Policies</li>
+        <li>Sim-to-Real Transfer &amp; Robot Learning</li>
+        <li>Planning and Control for Autonomous Systems</li>
+      </ul>
     </section>
 
     <section>
       <h2>Projects</h2>
 
+      <div class="project has-media">
+        <div>
+          <h3>Autonomous Drone Racing with RL and Sim-to-Real Transfer</h3>
+          <p>PPO racing policies trained in Isaac Lab with domain randomization and deployed on a real quadrotor through ROS 2.</p>
+          <div class="links">
+            <a href="projects/drone-racing/">Project page</a>
+            <a href="https://github.com/nithyasri0913/autonomous_drone" target="_blank">GitHub</a>
+            <a href="media/drone_racing_sim.mp4" target="_blank">Video</a>
+          </div>
+        </div>
+        <video class="project-media" src="media/drone_racing_sim.mp4" autoplay loop muted playsinline></video>
+      </div>
+
+      <div class="project has-media">
+        <div>
+          <h3>F1TENTH Autonomous Racing</h3>
+          <p>Pure pursuit with SLAM, particle filter localization and optimized racelines on a 1/10-scale car, in C++ on ROS 2.</p>
+          <div class="links">
+            <a href="projects/roboracer/">Project page</a>
+            <a href="media/f1tenth_race.mp4" target="_blank">Video</a>
+          </div>
+        </div>
+        <video class="project-media" src="media/f1tenth_clip.mp4" autoplay loop muted playsinline></video>
+      </div>
+
       <div class="project">
         <h3>Q-Guided Offline RL for Flow-Matching Policies</h3>
         <p>An offline RL method that selects actions with Q-guided targets and a co-trained critic. Co-first-author paper under review at ICLR 2027.</p>
-      </div>
-
-      <div class="project">
-        <h3>Autonomous Drone Racing with RL and Sim-to-Real Transfer</h3>
-        <p>PPO racing policies trained in Isaac Lab with domain randomization and deployed on a real quadrotor through ROS 2.</p>
-        <div class="links">
-          <a href="projects/drone-racing/">Project page</a>
-          <a href="https://github.com/nithyasri0913/autonomous_drone" target="_blank">GitHub</a>
-          <a href="media/drone_racing_sim.mp4" target="_blank">Video</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>F1TENTH Autonomous Racing</h3>
-        <p>Pure pursuit with SLAM, particle filter localization and optimized racelines on a 1/10-scale car, in C++ on ROS 2.</p>
-        <div class="links">
-          <a href="projects/roboracer/">Project page</a>
-          <a href="media/f1tenth_race.mp4" target="_blank">Video</a>
-        </div>
       </div>
 
       <div class="project">

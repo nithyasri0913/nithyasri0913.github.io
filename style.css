@@ -100,6 +100,21 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
+.about h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 20px 0 8px;
+}
+
+.about ul {
+    padding-left: 22px;
+    color: #cccccc;
+}
+
+.about li {
+    margin-bottom: 4px;
+}
+
 /* Projects */
 
 h2 {
@@ -111,7 +126,14 @@ h2 {
 }
 
 .project {
-    margin-bottom: 30px;
+    margin-bottom: 55px;
+}
+
+.project.has-media {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 25px;
+    align-items: center;
 }
 
 .project h3 {
@@ -122,6 +144,14 @@ h2 {
 
 .project p {
     color: #cccccc;
+}
+
+.project-media {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #111111;
 }
 
 .links {
@@ -212,6 +242,11 @@ h2 {
     color: #cccccc;
 }
 
+.empty {
+    color: #888888;
+    font-style: italic;
+}
+
 .post-card-meta {
     display: block;
     margin-top: 8px;
@@ -249,5 +284,9 @@ footer {
 
     nav {
         justify-content: center;
+    }
+
+    .project.has-media {
+        grid-template-columns: 1fr;
     }
 }
