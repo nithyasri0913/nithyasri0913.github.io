@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1TENTH Autonomous Racing | Nithyasri Srikumar</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div class="container">
+
+    <a href="../" class="back">&larr; Projects</a>
+
+    <article class="post">
+      <h1>F1TENTH Autonomous Racing</h1>
+      <p class="post-meta">ESE 6150, University of Pennsylvania • Fall 2026</p>
+
+      <video controls preload="metadata">
+        <source src="../../media/f1tenth_race.mp4" type="video/mp4">
+      </video>
+
+      <p>
+        ESE 6150 (F1TENTH, now called RoboRacer) is Penn's autonomous racing course. Each team
+        gets a 1/10-scale race car with a LiDAR and an onboard computer, and over the semester we
+        build the full autonomy stack ourselves in ROS 2: mapping, localization, planning and
+        control. There are three races: Race 1, Race 2 and a final race. Each one adds new methods
+        and pushes for faster laps.
+      </p>
+      <p>
+        The first labs covered reactive navigation, such as wall following and follow-the-gap,
+        where the car reacts directly to what the LiDAR sees and has no map. The races go further:
+        build a map of the track, know where you are on it, and follow the fastest line you can.
+        This page is where I'm writing up how our car works, what went wrong, and what we're trying
+        next.
+      </p>
+
+      <h2>Race 1: Pure Pursuit</h2>
+      <p>
+        For the first race we implemented pure pursuit in C++ on ROS 2 (Jazzy). The pipeline:
+      </p>
+      <ul>
+        <li>Build a map of the track with SLAM.</li>
+        <li>Localize on that map with a particle filter.</li>
+        <li>Compute minimum-curvature and minimum-time racelines as waypoints.</li>
+        <li>Track the raceline with pure pursuit and a velocity-dependent lookahead.</li>
+      </ul>
+      <p>
+        On the real car this averaged 8.7 s per lap on a ~20 m track, and we placed third in the
+        class.
+      </p>
+
+      <h2>What's Next</h2>
+      <p>
+        For Race 2 and the final race we're implementing LQR, MPC and MPPI.
+      </p>
+    </article>
+
+    <footer>
+      <p>&copy; 2026 Nithyasri Srikumar</p>
+    </footer>
+
+  </div>
+</body>
+</html>

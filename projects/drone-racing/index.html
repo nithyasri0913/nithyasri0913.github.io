@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Drone Racing | Nithyasri Srikumar</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div class="container">
+
+    <a href="../" class="back">&larr; Projects</a>
+
+    <article class="post">
+      <h1>Autonomous Drone Racing with RL and Sim-to-Real Transfer</h1>
+      <p class="post-meta">ESE 6510, University of Pennsylvania • Spring 2026</p>
+
+      <video controls preload="metadata">
+        <source src="../../media/drone_racing_sim.mp4" type="video/mp4">
+      </video>
+
+      <p>
+        In ESE 6510 we trained a quadrotor to race through gates using reinforcement learning. We
+        trained policies entirely in simulation in NVIDIA Isaac Lab, then flew them on a real drone
+        through a ROS 2 pipeline. The video above shows the policy in sim.
+      </p>
+
+      <h2>Training in Simulation</h2>
+      <p>
+        We trained the racing policies with PPO on a powerloop track, running many simulated drones
+        in parallel in Isaac Lab. The policy maps the drone's state directly to control commands,
+        so there is no separate planner or trajectory to track.
+      </p>
+
+      <h2>Reward Design</h2>
+      <p>
+        Most of the work was in shaping the reward. We combined dense terms that guide the drone
+        toward the next gate with a sparse bonus for passing each gate and penalties for crashing:
+      </p>
+      <ul>
+        <li><strong>Gate pass:</strong> a large bonus each time the drone passes through a gate</li>
+        <li><strong>Progress:</strong> rewards getting closer to the next gate</li>
+        <li><strong>Velocity toward gate:</strong> rewards flying fast in the right direction</li>
+        <li><strong>Centering:</strong> rewards lining up with the center of the gate</li>
+        <li><strong>Escape:</strong> helps the drone climb out of the altitude local optimum (below)</li>
+        <li><strong>Crash penalty and death cost:</strong> penalize collisions and ending the episode early</li>
+      </ul>
+      <p>
+        Most of the tuning went into balancing these terms: push too hard for speed and the drone
+        crashes, penalize crashes too hard and it learns to fly cautiously and slowly.
+      </p>
+      <p>
+        On a 7-gate track with 2.0 m obstacles, the policy got stuck in an altitude local optimum
+        and never made it past the obstacles. A gate-centric vertical progress reward got it out,
+        and after that the drone flew through all the gates consistently.
+      </p>
+
+      <h2>Getting It to Fly for Real</h2>
+      <p>
+        A policy that flies well in sim can still fail on hardware. To make ours robust, we trained
+        with domain randomization over:
+      </p>
+      <ul>
+        <li>Aerodynamic drag</li>
+        <li>PID controller gains</li>
+        <li>Thrust-to-weight ratio</li>
+      </ul>
+      <p>
+        On the real drone, the policy completed three racing laps in 17.14 s.
+      </p>
+      <p>
+        When real flights went wrong, we went through the ROS 2 bag recordings to find out why. The
+        main problems were latency mismatches between perception and control, and policy instability.
+        Those findings decided what we debugged next.
+      </p>
+    </article>
+
+    <div class="links">
+      <a href="https://github.com/nithyasri0913/autonomous_drone" target="_blank">GitHub</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Nithyasri Srikumar</p>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,237 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nithyasri Srikumar - Research Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nithyasri Srikumar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <img src="media/profile_pic.jpg" alt="Nithyasri Srikumar" class="profile-image">
+      <div class="header-text">
         <h1>Nithyasri Srikumar</h1>
-        <p>Master's Student</p>
-        <p>Computer and Information Science • University of Pennsylvania</p>
+        <p>MSE in Computer and Information Science • University of Pennsylvania</p>
         <nav>
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#projects">Projects</a>
-          <a href="#cv">CV</a>
-          <a href="#contact">Contact</a>
+          <a href="projects/">Projects</a>
+          <a href="mailto:nithsri@seas.upenn.edu">Email</a>
+          <a href="https://github.com/nithyasri0913" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/nithyasri-s" target="_blank">LinkedIn</a>
+          <a href="media/nithyasri_cv.pdf" target="_blank">CV</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <section id="about">
-        <h2>About</h2>
-        <div class="about-content">
-          <img
-            src="profile_pic.jpg"
-            alt="Nithyasri Srikumar"
-            class="profile-image"
-          />
-          <div class="about-text">
-            <div class="bio">
-              <p>
-                I am a Master's student in Computer and Information Science at
-                the University of Pennsylvania. My research interests lie at the
-                intersection of reinforcement learning and safety-critical
-                autonomous systems.
-              </p>
+    <section class="about">
+      <p>
+        I am a Master's student in Computer and Information Science at the University of Pennsylvania,
+        advised by Dr. Osbert Bastani and Dr. Dinesh Jayaraman. I work on reinforcement learning
+        for robotics, especially offline RL with flow- and diffusion-based policies for VLAs and
+        sim-to-real transfer.
+      </p>
+    </section>
 
-              <p>
-                I am currently conducting research on vision-language-action models, investigating how to make generalist robot policies more reliable and safe for real-world deployment. My work bridges reinforcement learning, computer vision, and formal methods to build AI systems that can be trusted in safety-critical applications.
-              </p>
+    <section>
+      <h2>Projects</h2>
 
-              <p>
-                Prior to joining Penn, I worked as a Software Engineer at Wells
-                Fargo, where I modernized legacy systems and built full-stack
-                applications. I received my Bachelor's degree in Computer
-                Science and Engineering from SRM Institute of Science and
-                Technology with a 3.98 GPA.
-              </p>
-            </div>
+      <div class="project">
+        <h3>Q-Guided Offline RL for Flow-Matching Policies</h3>
+        <p>An offline RL method that selects actions with Q-guided targets and a co-trained critic. Co-first-author paper under review at ICLR 2027.</p>
+      </div>
 
-            <div class="research-interests">
-              <h3>Research Interests</h3>
-              <ul>
-                <li>Vision-Language-Action Models & Embodied AI</li>
-                <li>Safe Reinforcement Learning & Formal Verification</li>
-                <li>Trustworthy AI: Explainability & Uncertainty Quantification</li>
-                <li>Robot Learning for Real-World Deployment</li>
-              </ul>
-            </div>
-          </div>
+      <div class="project">
+        <h3>Autonomous Drone Racing with RL and Sim-to-Real Transfer</h3>
+        <p>PPO racing policies trained in Isaac Lab with domain randomization and deployed on a real quadrotor through ROS 2.</p>
+        <div class="links">
+          <a href="projects/drone-racing/">Project page</a>
+          <a href="https://github.com/nithyasri0913/autonomous_drone" target="_blank">GitHub</a>
+          <a href="media/drone_racing_sim.mp4" target="_blank">Video</a>
         </div>
-      </section>
+      </div>
 
-      <section id="research">
-        <h2>Research</h2>
-
-        <div class="research-project">
-          <div class="project-title">
-            Vision-Language-Action Models for Robot Manipulation
-          </div>
-          <div class="project-role">Research Assistant, TrustML, University of Pennsylvania | Jan 2026 - Present</div>
-          <p>
-            Investigating failure modes in state-of-the-art vision-language-action models for robotic manipulation. Conducted systematic evaluation of π₀ model across 300+ trials, identifying critical limitations in spatial reasoning, partial observability, and safety constraints. Developed insights on improving generalist robot policies through better uncertainty quantification and safety mechanisms. Collaborated with PhD students to bridge research and deployment gaps in embodied AI systems.
-          </p>
+      <div class="project">
+        <h3>F1TENTH Autonomous Racing</h3>
+        <p>Pure pursuit with SLAM, particle filter localization and optimized racelines on a 1/10-scale car, in C++ on ROS 2.</p>
+        <div class="links">
+          <a href="projects/roboracer/">Project page</a>
+          <a href="media/f1tenth_race.mp4" target="_blank">Video</a>
         </div>
+      </div>
 
-        <div class="research-project">
-          <div class="project-title">
-            Safe Reinforcement Learning with Hamilton-Jacobi Reachability Analysis
-          </div>
-          <div class="project-role">Research Assistant, xLab, University of Pennsylvania | Sep 2025 - Dec 2025</div>
-          <p>
-            Implemented safe reinforcement learning by combining Hamilton-Jacobi reachability analysis with PPO, achieving 40% reduction in safety violations in autonomous navigation tasks while maintaining task performance. Developed a safety Q-network using PyTorch that predicts constraint violation costs and applies safety shielding by filtering unsafe actions before execution. Validated algorithms in multi-agent autonomous vehicle simulation environments, demonstrating practical application to safety-critical systems.
-          </p>
+      <div class="project">
+        <h3>PennOS</h3>
+        <p>A Unix-like kernel in C with priority scheduling, a FAT file system and user-level threads.</p>
+        <div class="links">
+          <a href="https://github.com/nithyasri0913/pennos" target="_blank">GitHub</a>
         </div>
-      </section>
-      <div>
-        <div class="research-project">
-          <div class="project-title">
-            Multimodal Emotion Recognition from Audio and Video
-          </div>
-          <div class="project-role">Independent Research | April 2024</div>
-          <p>
-            Achieved multimodal emotion recognition from audio and video,
-            improving accuracy by over 60% compared to unimodal models, by
-            combining audio features (STFT, MFCC via Librosa) and video features
-            (facial landmarks with OpenCV) and applying CNNs with decision-level
-            fusion. Demonstrated robust emotion classification through a live
-            application with real-world use in conversational agents,
-            recommendation systems, and smart environments.
-          </p>
+      </div>
+
+      <div class="project">
+        <h3>Retrieval-Augmented Question Answering</h3>
+        <p>Sentence Transformers and FAISS retrieval with DeBERTa extractive QA.</p>
+        <div class="links">
+          <a href="https://github.com/nithyasri0913/Retrieval-Augmented-QA-System-with-DeBERTa" target="_blank">GitHub</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
+    <footer>
+      <p>&copy; 2026 Nithyasri Srikumar</p>
+    </footer>
 
-        <!-- <div class="research-project">
-          <div class="project-title">
-            Safe Reinforcement Learning with Hamilton-Jacobi Reachability
-            Analysis
-          </div>
-          <div class="project-role">Independent Research | 2024 - Present</div>
-          <p>
-            Developed a safety-constrained RL system combining PPO
-            (Stable-Baselines3) with a custom safety critic network that
-            implements modified Bellman operators from Hamilton-Jacobi
-            reachability theory. Integrated action shielding to filter unsafe
-            actions before execution, reducing safety violations by 40% in
-            grid-world environments with obstacles. Demonstrated the fundamental
-            safety-performance tradeoff in hard-constrained systems, where zero
-            violations were achievable but at the cost of task completion,
-            motivating future work in probabilistic shielding and soft
-            constraint methods.
-          </p>
-        </div> -->
-        <div class="research-project">
-  <div class="project-title">
-    Question Answering System with Retrieval-Augmented Generation
   </div>
-  <div class="project-role">
-    Independent Project | July 2024 - August 2024
-  </div>
-  <p>
-    Built a question answering system combining DeBERTa with Retrieval-Augmented Generation to improve factual accuracy and reduce hallucinations. Implemented dense passage retrieval using sentence transformers to select relevant context from large document collections, followed by fine-tuned DeBERTa for answer extraction. Demonstrated challenges in interpretability when the model produced plausible but incorrect answers, motivating further work in explainable AI systems.
-  </p>
-</div>
-        <div class="research-project">
-          <div class="project-title">
-            Image Captioning using ResNet-50 and LSTM with Attention Mechanism
-          </div>
-          <div class="project-role">
-            Course Project | September 2021 - December 2021
-          </div>
-          <p>
-            Generated descriptive captions for 10,000+ images, measured by BLEU
-            and CIDEr scores, by extracting features with ResNet-50 and training
-            an attention-enhanced LSTM. Enhanced caption relevance and alignment
-            with visual regions through hyperparameter tuning and attention
-            visualization, demonstrating ability to handle large-scale, complex
-            vision-language tasks.
-          </p>
-        </div>
-
-        <div class="research-project">
-          <div class="project-title">Style Transfer using CycleGANs</div>
-          <div class="project-role">
-            Team of 2 | September 2022 - December 2022
-          </div>
-          <p>
-            Achieved high-quality artistic style transfer on images, measured by
-            visually enhanced outputs, by developing and optimizing CycleGAN
-            generator/discriminator networks with perceptual loss and instance
-            normalization.
-          </p>
-        </div>
-
-        <div class="research-project">
-          <div class="project-title">
-            Collusion Detection in Auctions Using Clustering & Statistical
-            Analysis
-          </div>
-          <div class="project-role">
-            Course Project | January 2022 - May 2022
-          </div>
-          <p>
-            Detected dynamic collusion and enhanced auction fairness by
-            identifying anomalous bidder groups and bid rotations using DBSCAN
-            clustering, Markov Chains for sequence modeling, and Z-Score
-            statistical analysis.
-          </p>
-        </div>
-      </section>
-
-      <section id="cv">
-        <h2>Curriculum Vitae</h2>
-        <p>
-          Download my full CV for complete details of my education, research
-          experience, publications, presentations, and awards.
-        </p>
-        <a href="nithyasri_cv.pdf" class="cv-button" download>Download CV</a>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-          <div class="contact-item">
-            <strong>Email:</strong>
-            <a href="mailto:nithsri@seas.upenn.edu">nithsri@seas.upenn.edu</a>
-             •
-            <a href="mailto:nithyasri0913@gmail.com">nithyasri0913@gmail.com</a>
-          </div>
-          <div class="contact-item">
-            <strong>University:</strong>
-            <span>University of Pennsylvania<br />Philadelphia, PA</span>
-          </div>
-          <div class="contact-item">
-            <strong>Links:</strong>
-            <span>
-              <a href="https://github.com/nithyasri0913" target="_blank"
-                >GitHub Personal</a
-              >
-               •
-              <a href="https://github.com/nithyeah1" target="_blank"
-                >GitHub Penn</a
-              >
-              •
-              <a href="https://linkedin.com/in/nithyasri-s" target="_blank"
-                >LinkedIn</a
-              >
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <p>&copy; 2025 Nithyasri Srikumar. All rights reserved.</p>
-        <p>Last updated: November 2025</p>
-      </footer>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
