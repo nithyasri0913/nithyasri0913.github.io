@@ -1,101 +1,175 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nithyasri Srikumar</title>
-  <link rel="stylesheet" href="style.css?v=2">
-</head>
-<body>
-  <div class="container">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <header>
-      <img src="media/profile_pic.jpg" alt="Nithyasri Srikumar" class="profile-image">
-      <div class="header-text">
-        <h1>Nithyasri Srikumar</h1>
-        <p>MSE in Computer and Information Science • University of Pennsylvania</p>
-        <nav>
-          <a href="projects/">Projects</a>
-          <a href="blog/">Blog</a>
-          <a href="mailto:nithsri@seas.upenn.edu">Email</a>
-          <a href="https://github.com/nithyasri0913" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/nithyasri-s" target="_blank">LinkedIn</a>
-          <a href="media/nithyasri_cv.pdf" target="_blank">CV</a>
-        </nav>
-      </div>
-    </header>
+    <title>Nithyasri Srikumar</title>
 
-    <section class="about">
-      <p>
-        I am a Master's student in Computer and Information Science at the University of Pennsylvania,
-        advised by Dr. Osbert Bastani and Dr. Dinesh Jayaraman. I work on reinforcement learning
-        for robotics, especially offline RL with flow- and diffusion-based policies for VLAs and
-        sim-to-real transfer.
-      </p>
+    <meta name="author" content="Nithyasri Srikumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
 
-      <h3>Research Interests</h3>
-      <ul>
-        <li>Offline Reinforcement Learning &amp; Value Learning</li>
-        <li>Flow- and Diffusion-Based Robot Policies</li>
-        <li>Sim-to-Real Transfer &amp; Robot Learning</li>
-        <li>Planning and Control for Autonomous Systems</li>
-      </ul>
-    </section>
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
 
-    <section>
-      <h2>Projects</h2>
+          <!-- Intro -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:72%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Nithyasri Srikumar
+                </p> <br/><br/>
+                <p>
+                  I'm a Master's student in Computer and Information Science at the <a href="https://www.upenn.edu/">University of Pennsylvania</a>,
+                  advised by <a href="https://obastani.github.io/">Prof. Osbert Bastani</a> and <a href="https://www.seas.upenn.edu/~dineshj/">Prof. Dinesh Jayaraman</a>.
+                  I work on reinforcement learning for robotics, especially offline RL with flow- and diffusion-based policies for VLAs, sim-to-real transfer, and planning and control for autonomous systems.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:nithsri@engineering.upenn.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="data/NithyasriSrikumar-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="blog/">Blog</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/nithyasri0913">GitHub</a> &nbsp;/&nbsp;
+                  <a href="https://linkedin.com/in/nithyasri-s">LinkedIn</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:28%;max-width:28%;text-align:center;vertical-align:middle">
+                <a href="images/profile.jpg"><img style="width:100%;max-width:180px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;" alt="profile photo" src="images/profile.jpg"></a>
+              </td>
+            </tr>
+          </tbody></table>
 
-      <div class="project has-media">
-        <div>
-          <h3>Autonomous Drone Racing with RL and Sim-to-Real Transfer</h3>
-          <p>PPO racing policies trained in Isaac Lab with domain randomization and deployed on a real quadrotor through ROS 2.</p>
-          <div class="links">
-            <a href="projects/drone-racing/">Project page</a>
-            <a href="https://github.com/nithyasri0913/autonomous_drone" target="_blank">GitHub</a>
-            <a href="media/drone_racing_sim.mp4" target="_blank">Video</a>
-          </div>
-        </div>
-        <video class="project-media" src="media/drone_racing_sim.mp4" autoplay loop muted playsinline></video>
-      </div>
+          <!-- Research interests -->
+           <br/>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research &amp; Projects</h2>
+              </td>
+            </tr>
+          </tbody></table>
 
-      <div class="project has-media">
-        <div>
-          <h3>F1TENTH Autonomous Racing</h3>
-          <p>Pure pursuit with SLAM, particle filter localization and optimized racelines on a 1/10-scale car, in C++ on ROS 2.</p>
-          <div class="links">
-            <a href="projects/roboracer/">Project page</a>
-            <a href="media/f1tenth_race.mp4" target="_blank">Video</a>
-          </div>
-        </div>
-        <video class="project-media" src="media/f1tenth_clip.mp4" autoplay loop muted playsinline></video>
-      </div>
+          <!-- Projects -->
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-      <div class="project">
-        <h3>Q-Guided Offline RL for Flow-Matching Policies</h3>
-        <p>An offline RL method that selects actions with Q-guided targets and a co-trained critic. Co-first-author paper under review at ICLR 2027.</p>
-      </div>
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <video width="160" muted autoplay loop playsinline>
+                  <source src="images/drone_racing_160.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="drone-racing/">
+                  <span class="papertitle">Autonomous Drone Racing with RL and Sim-to-Real Transfer</span>
+                </a>
+                <br>
+                <em>ESE 6510, University of Pennsylvania</em>, Spring 2026
+                <br>
+                <a href="drone-racing/">project page</a>
+                /
+                <a href="https://github.com/nithyasri0913/autonomous_drone">code</a>
+                /
+                <a href="images/drone_racing.mp4">video</a>
+                <p></p>
+                <p>
+                  PPO racing policies trained in Isaac Lab with domain randomization and deployed on a real quadrotor through ROS 2. Completed three racing laps in 17.14 s.
+                </p>
+              </td>
+            </tr>
 
-      <div class="project">
-        <h3>PennOS</h3>
-        <p>A Unix-like kernel in C with priority scheduling, a FAT file system and user-level threads.</p>
-        <div class="links">
-          <a href="https://github.com/nithyasri0913/pennos" target="_blank">GitHub</a>
-        </div>
-      </div>
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <video width="160" muted autoplay loop playsinline>
+                  <source src="images/f1tenth_160.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="roboracer/">
+                  <span class="papertitle">F1TENTH Autonomous Racing</span>
+                </a>
+                <br>
+                <em>ESE 6150, University of Pennsylvania</em>, Fall 2026
+                <br>
+                <a href="roboracer/">project page</a>
+                /
+                <a href="images/f1tenth.mp4">video</a>
+                <p></p>
+                <p>
+                  Pure pursuit with SLAM, particle filter localization and optimized racelines on a 1/10-scale car, in C++ on ROS 2. Placed third in Race 1.
+                </p>
+              </td>
+            </tr>
 
-      <div class="project">
-        <h3>Retrieval-Augmented Question Answering</h3>
-        <p>Sentence Transformers and FAISS retrieval with DeBERTa extractive QA.</p>
-        <div class="links">
-          <a href="https://github.com/nithyasri0913/Retrieval-Augmented-QA-System-with-DeBERTa" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </section>
+            <tr bgcolor="#ffffd0">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <img src="images/qgrql.png" width="160" alt="QGRQL target versus RQL target">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">Q-Guided Offline RL for Flow-Matching Policies</span>
+                <br>
+                <em>Under review at ICLR</em>, 2027 &nbsp;(co-first author)
+                <p></p>
+                <p>
+                  An offline RL method that selects actions with Q-guided targets and a co-trained critic.
+                </p>
+              </td>
+            </tr>
 
-    <footer>
-      <p>&copy; 2026 Nithyasri Srikumar</p>
-    </footer>
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://github.com/nithyasri0913/pennos">
+                  <span class="papertitle">PennOS</span>
+                </a>
+                <br>
+                <em>Team of 3</em>, Fall 2025
+                <br>
+                <a href="https://github.com/nithyasri0913/pennos">code</a>
+                <p></p>
+                <p>
+                  A Unix-like kernel in C with priority scheduling, a FAT file system and user-level threads.
+                </p>
+              </td>
+            </tr>
 
-  </div>
-</body>
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://github.com/nithyasri0913/Retrieval-Augmented-QA-System-with-DeBERTa">
+                  <span class="papertitle">Retrieval-Augmented Question Answering</span>
+                </a>
+                <br>
+                <em>Independent project</em>, Summer 2024
+                <br>
+                <a href="https://github.com/nithyasri0913/Retrieval-Augmented-QA-System-with-DeBERTa">code</a>
+                <p></p>
+                <p>
+                  Sentence Transformers and FAISS retrieval with DeBERTa extractive QA.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <!-- Footer -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:center;font-size:small;">
+                  Website template from <a href="https://jonbarron.info/">Jon Barron</a>
+                  (<a href="https://github.com/jonbarron/jonbarron_website">source code</a>).
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
